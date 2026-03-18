@@ -7,11 +7,11 @@ This is NOT your API key.
 
 You can use the ValidateRequest method, just pass the request and base url as parameters:
 
-    validator := signature_jwt.NewValidator([]byte("your signing key"))
-	baseUrl := "https://yourdomain.com"
-    if err := validator.ValidateRequest(r, baseUrl); err != nil {
-        // handle error
-    }
+	    validator := signature_jwt.NewValidator([]byte("your signing key"))
+		baseUrl := "https://yourdomain.com"
+	    if err := validator.ValidateRequest(r, baseUrl); err != nil {
+	        // handle error
+	    }
 
 Or use the handler as a middleware for your server:
 
@@ -33,7 +33,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/golang-jwt/jwt"
+	"github.com/golang-jwt/jwt/v4"
 )
 
 const signatureHeader = "MessageBird-Signature-JWT"
